@@ -1,3 +1,4 @@
+import os
 import json
 import random
 
@@ -19,6 +20,9 @@ response = {
     "question 3": random.choices(items, weights=units_sold)
 }
 
+if not os.path.exists("output"):
+    os.mkdir("output")
+
 json_object = json.dumps(response)
-with open("answers.json", "w") as file:
+with open("output/answers.json", "w") as file:
     file.write(json_object)
