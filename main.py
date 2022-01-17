@@ -26,3 +26,5 @@ if not os.path.exists("output"):
 json_object = json.dumps(response)
 with open("output/answers.json", "w") as file:
     file.write(json_object)
+
+print("I have completed")
