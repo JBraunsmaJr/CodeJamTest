@@ -32,7 +32,7 @@ file_min = random.choices([0,1,2,3], weights=[50,20,10,5])[0]
 for x in range(file_min):
     extension = random.choices(["txt", "json", "png", "jpg", "gif"], weights=[50,40,10,10,10])[0]
 
-    with open(os.path.join(f"output/file_{x}.{extension}")) as file:
+    with open(os.path.join(f"output/file_{x}.{extension}"), "w") as file:
         file.write(json_object)
 
 print("I have completed")
