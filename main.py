@@ -27,12 +27,13 @@ json_object = json.dumps(response)
 with open("output/answers.json", "w") as file:
     file.write(json_object)
 
-file_min = random.choices([0,1,2,3], weights=[50,20,10,5])[0]
+file_min = random.choices([0, 1, 2, 3], weights=[50, 20, 10, 5])[0]
 
 for x in range(file_min):
-    extension = random.choices(["txt", "json", "png", "jpg", "gif"], weights=[50,40,10,10,10])[0]
+    extension = random.choices(["txt", "json", "png", "jpg", "gif"], weights=[50, 40, 10, 10, 10])[0]
 
     with open(os.path.join(f"output/file_{x}.{extension}"), "w") as file:
         file.write(json_object)
 
 print("I have completed")
+print(json_object)
